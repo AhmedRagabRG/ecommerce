@@ -1,0 +1,12 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+  <app-product
+    *ngFor="let product of products"
+    [title]="product.name"
+    [imgUrl]="product.imageUrl"
+    [price]="product.price"
+    [rating]="product.rating"
+    (addToCart)="addToCart(product.id)"
+  ></app-product>
+</div>
+
+<app-pagination [perPage]="perPage"></app-pagination>
