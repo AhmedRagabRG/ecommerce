@@ -3,7 +3,7 @@ import { IProduct } from './interfaces/product';
 import { ProductComponent } from '../product/product.component';
 import { ProductsService } from '../../services/products.service';
 import { CartService } from '../../services/cart.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { PaginationComponent } from '../pagination/pagination.component';
 
 @Component({
@@ -18,7 +18,11 @@ export class ProductsComponent {
   perPage: number = 10;
   totalItems: number;
 
-  constructor(private _productsService: ProductsService, private _cartService: CartService) {
+  constructor(
+    private _productsService: ProductsService,
+    private _cartService: CartService,
+    private viewportScroller: ViewportScroller
+  ) {
     this.totalItems = this._productsService.getAllProducts().length;
     this.loadProducts();
   }
@@ -32,6 +36,7 @@ export class ProductsComponent {
   onPageChanged(page: number) {
     this.currentPage = page;
     this.loadProducts();
+    this.viewportScroller.scrollToPosition([0, 0]);
   }
 
   addToCart(id: number) {

@@ -9,4 +9,4 @@
   ></app-product>
 </div>
 
-<app-pagination [perPage]="perPage"></app-pagination>
+<app-pagination [totalItems]="totalItems" [currentPage]="currentPage" [perPage]="perPage" (pageChanged)="onPageChanged($event)"></app-pagination>

@@ -11,9 +11,11 @@ export class PaginationComponent {
     @Input() perPage: number = 10;
     @Input() totalItems: number = 0;
     @Input() currentPage: number = 1;
-    @Output() pageChanged = new EventEmitter<number>();
+    @Output() pageChanged: EventEmitter<number>
 
-    constructor() {}
+    constructor() {
+        this.pageChanged= new EventEmitter<number>();
+    }
 
     get totalPages(): number {
         return Math.ceil(this.totalItems / this.perPage);

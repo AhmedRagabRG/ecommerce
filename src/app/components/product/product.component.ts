@@ -14,7 +14,7 @@ export class ProductComponent {
   @Input() imgUrl = 'https://example.com/images/';
   @Input() price = 0;
   @Input() rating = Math.floor(6);
-
+  @Input() addToCartText = "Addd To Cart";
   @Output() addToCart = new EventEmitter<IProduct>();
 
   constructor() {}
