@@ -17,7 +17,7 @@ export class ProductsService {
           'High-quality Bluetooth headphones with noise-cancellation.',
         imageUrl:
           'https://www.apple.com/mideast/apple-watch-se/q/images/overview/hero/non-lte/hero__f76n0zejlxqq_large.jpg',
-        rating: 1,
+        rating: 1.2,
         category: 'Electronics',
         isAvailable: true,
         quantity: 15,
@@ -29,7 +29,7 @@ export class ProductsService {
         description: 'Durable, leak-proof water bottle for everyday use.',
         imageUrl:
           'https://www.apple.com/mideast/apple-watch-se/q/images/overview/hero/non-lte/hero__f76n0zejlxqq_large.jpg',
-        rating: 5,
+        rating:4.9,
         category: 'Accessories',
         isAvailable: true,
         quantity: 50,

@@ -23,4 +23,7 @@ export class ProductComponent {
     this.addToCart.emit();
   }
 
+  parseNum(num: number) {
+    return Math.floor(num)
+  }
 }

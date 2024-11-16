@@ -16,7 +16,7 @@ export class CartComponent {
   constructor(private _CartService: CartService) {
     this.cart = this._CartService.cart;
   }
-  
+
   removeItem(id: number): void {
     this.cart = this._CartService.remmoveFromCart(id);
   }
